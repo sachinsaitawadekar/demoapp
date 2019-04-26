@@ -3,7 +3,6 @@ os: linux
 files:
   - source: deployFiles
     destination: /var/www/html/sample/public_html/ 
-files:
   - source: /confiles/sample.conf
     destination: /etc/httpd/conf.d/
 hooks:
