@@ -1,8 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
+  - source: /deployFiles/*
+    destination: /var/www/html/sample/public_html/ 
+files:
+  - source: /confiles/*
+    destination: /etc/httpd/conf.d/
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
