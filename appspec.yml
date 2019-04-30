@@ -1,20 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: deployFiles
-    destination: /var/www/html/sample/public_html/ 
   - source: /confiles/sample.conf
-    destination: /etc/httpd/conf.d/
-hooks:
-  BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
-
+    destination: /etc/
